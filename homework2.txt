@@ -1,0 +1,235 @@
+9/12 금요일 IT 과제2
+
+
+1. 치킨 주문 알림기
+주문 들어온 치킨의 수만큼 “치킨 1마리 주문이요”, “치킨 2마리주문이요”, … “치킨 n마리 주문이요”  출력
+
+import java.util.Scanner;
+public class Hw1 {
+public static void main(String[] args) {
+		
+Scanner sc = new Scanner(System.in);
+System.out.println("치킨의 수를 입력하세요: ");
+int chicken = sc.nextInt();
+		
+for (int i = 1; i <= chicken ; i++) {
+System.out.println("치킨" + i + "마리 주문이용");
+		}
+sc.close();
+
+
+2. 스쿼트 계산기
+"스쿼트 몇 번 할까요? “의 값을 받은 만큼
+“스쿼트 1회 완료”, “스쿼트 2회 완료”, .. “스쿼트 n회 완료”, 
+마지막엔 “오늘 운동 끝” 출력
+
+package ch2;
+import java.util.Scanner;
+public class Hw1 {
+public static void main(String[] args) {
+			
+Scanner sc = new Scanner(System.in);
+System.out.println("스쿼트 몇 번 할까요?");
+int health = sc.nextInt();
+		
+for (int i = 1; i <= health ; i++) {
+System.out.println("스쿼트" + i + "회 완료");
+	}
+		
+System.out.println("오늘 운동 끝");
+
+sc.close();
+
+
+3. 입력받은 수의 짝수만 출력하는 계산기
+
+package ch2;
+import java.util.Scanner;
+public class Hw1 {
+public static void main(String[] args) {
+			
+Scanner sc = new Scanner(System.in);
+System.out.println("숫자를 입력해 주세요");
+int number = sc.nextInt();
+	
+for ( int i = 1 ; i <= number ; i++) {
+	if (i % 2 == 0) { 
+	System.out.println(i);
+	}
+	}
+	
+
+4. 두 수를 입력 받아 그 사이 숫자 모두 출력
+
+package ch2;
+import java.util.Scanner;
+public class Hw1 {
+public static void main(String[] args) {
+	
+Scanner sc = new Scanner(System.in);
+System.out.println("첫번째 숫자를 입력해 주세요");
+int a = sc.nextInt();
+System.out.println("두번째 숫자를 입력해 주세요");
+int b = sc.nextInt();
+	
+	if (a < b) {
+		for(int i = a; i <= b ; i++) {
+			System.out.println(i + " ");
+		}
+	} else {
+		for (int i = b; i <= a ; i++) {
+			System.out.println(i + " ");	
+		}
+	}
+	
+
+5. 구구단의 3단을 출력
+ex) 3 x 1 = 3, 3 x 2 = 6, 3 x 3 = 9, … 3 x 9 = 27
+
+package ch2;
+public class Hw2 {
+public static void main(String[] args) {
+
+int gugudan = 3;
+
+for (int i = 1; i <= 9; i++) {
+System.out.println(gugudan + " x " + i + " = " + (gugudan * i));
+        }	    
+	}
+	}
+
+
+6. 입력한 수로 구구단을 만드세요. 
+ex) 5 입력 → 5단 구구단 출력
+
+package ch2;
+import java.util.Scanner;
+public class Hw2 {
+public static void main(String[] args) {
+		
+Scanner sc = new Scanner(System.in);
+System.out.println("숫자를 입력하세요");
+int num = sc.nextInt();
+		
+for (int i = 1; i <= 9 ; i++) {
+System.out.println(num + "x" + i + "=" + (num * i));		
+		}
+		}
+	}
+
+7. 숫자를 입력하면, 3의 배수일 때만 "점프!"를 출력하고, 아니면 "패스" 출력
+
+package ch2;
+import java.util.Scanner;
+public class Hw2 {
+public static void main(String[] args) {
+		
+Scanner sc = new Scanner(System.in);
+System.out.println("숫자를 입력하세요: ");
+int num = sc.nextInt();
+		
+if (num % 3 ==0) {
+	System.out.println("점프!");
+		}
+else  { System.out.println("패스"); }
+	sc.close();
+	}
+	}
+
+8.정수를 입력받아, n x n 크기의 네모(정사각형) 별(*)을 출력
+
+package ch2;
+import java.util.Scanner;
+public class Hw2 {
+public static void main(String[] args) {
+
+ Scanner sc = new Scanner(System.in);
+ System.out.print("정수를 입력하세요: ");
+int n = sc.nextInt();
+
+for (int i = 0; i < n; i++) { 
+for (int j = 0; j < n; j++) { 
+System.out.print("*");
+            }
+System.out.println();
+        }
+sc.close();
+    }
+}
+
+9. 피자 조각 개수와 사람 수를 입력받아, 한 사람당 몇 조각 먹을 수 있는지, 남는 조각은 몇 개인지 출력
+
+package ch2;
+import java.util.Scanner;
+public class Hw2 {
+public static void main(String[] args) {
+
+Scanner sc = new Scanner(System.in);
+System.out.print("피자 조각 수를 입력하세요: ");
+int pizzanum = sc.nextInt();
+System.out.println("사람 수를 입력하세요");
+nt people = sc.nextInt();
+        
+int perpeople = pizzanum / people ;
+ int left = pizzanum % people ;
+        
+System.out.println("한 사람당" + perpeople + "조각 먹을 수 있습니다");
+System.out.println("남는 조각은" + left + "조각입니다.");
+  sc.close();
+	}
+}
+
+10.주사위를 두 번 던졌을 때, 각각의 결과를 출력하고, 두 숫자의 합을 출력
+ex) 첫 번째 주사위: 3,  두 번째 주사위: 5 → 두 수의 합: 8
+
+package ch2;
+import java.util.Scanner;
+public class Hw2 {
+public static void main(String[] args) {
+		
+Scanner sc = new Scanner(System.in);
+ System.out.println("첫번째 주사위 값을 입력하세요");
+int num1 = sc.nextInt();
+System.out.println("두번째 주사위 값을 입력하세요");
+int num2 = sc.nextInt();
+        
+ int sum = num1 + num2 ;
+        
+System.out.println("첫 번째 주사위: " + num1);
+System.out.println("두 번째 주사위: " + num2);
+System.out.println("두 수의 합: " + sum);
+        sc.close()
+
+	}
+}
+
+
+
+11. 1 ~ 50 중 랜덤 숫자를 하나 만들고, 사용자가 숫자를 입력해서 맞출 때까지 "UP" 또는 "DOWN"을 출력
+
+package ch2;
+import java.util.Scanner;
+public class Hw2 {
+public static void main(String[] args) {
+
+int answer = (int)(Math.random() * 50) + 1;
+Scanner sc = new Scanner(System.in);
+int guess;		
+	
+do {
+System.out.println("1~50 사이의 숫자를 입력하세요: ");
+guess = sc.nextInt();
+
+if (guess < answer) {
+System.out.println("UP");
+} else if (guess > answer) {
+System.out.println("DOWN");
+} else {
+System.out.println("정답입니다!");
+}
+} while (guess != answer);
+
+       sc.close(); 
+	}
+}
+        
